@@ -38,7 +38,7 @@ def check_my_city(city_name):
     code_clean = []
     cit_clean = []
     for i in range(len(velib)):
-        if velib[i]['city'] == city_name:
+        if velib[i]['city'][:-1] == city_name:
             code = [code, velib[i].get('zip')]
             cit = [cit, velib[i].get('city')]
             code_clean = [code_clean, code[i][:-1]]
@@ -48,4 +48,4 @@ def check_my_city(city_name):
     else:
         return {"stations_nb": len(code) - 1,
                 "zip_code": code_clean[1:],
-                "city": cit_clean[1:]}
+                "city": cit_clean[1]}
