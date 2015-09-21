@@ -5,4 +5,6 @@ station = {
  'name': 'CHAMPEAUX (BAGNOLET)',
  'longitude': 2.416170724425901
  }
-print(station)
+
+for i in station.keys():
+    print(i, station.get(i))
