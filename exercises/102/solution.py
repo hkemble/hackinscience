@@ -35,17 +35,13 @@ velib = \
 def check_my_city(city_name):
     code = []
     cit = []
-    code_clean = []
-    cit_clean = []
     for i in range(len(velib)):
         if velib[i]['city'][:-1] == city_name:
-            code = [code, velib[i].get('zip')]
-            cit = [cit, velib[i].get('city')]
-            code_clean = [code_clean, code[i][:-1]]
-            cit_clean = [cit_clean, cit[i][:-1]]
+            code = [code, velib[i].get('zip')[:-1]]
+            cit = [cit, velib[i].get('city')[-1]]
     if len(code) == 1:
         return "Sorry! No station for your city has been found!"
     else:
         return {"stations_nb": len(code) - 1,
-                "zip_code": code_clean[1:],
-                "city": cit_clean[1]}
+                "zip_code": code[1:],
+                "city": cit[1]}
