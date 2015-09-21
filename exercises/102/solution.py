@@ -2,7 +2,7 @@ velib = \
     [{'address': ('RUE DES CHAMPEAUX (PRES DE LA GARE ROUTIERE)',
       '- 93170 BAGNOLET'),
       'zip': '93170-',
-      'number': 31705, 'latitude': 48.8645278209514, 'city': 'BAGNOLET',
+      'number': 31705, 'latitude': 48.8645278209514, 'city': 'BAGNOLET-',
       'name': 'CHAMPEAUX (BAGNOLET)-',
       'longitude': 2.416170724425901},
 
@@ -38,7 +38,7 @@ def check_my_city(city_name):
     for i in range(len(velib)):
         if velib[i]['city'][:-1] == city_name:
             code = [code, velib[i].get('zip')[:-1]]
-            cit = [cit, velib[i].get('city')[-1]]
+            cit = [cit, velib[i].get('city')[:-1]]
     if len(code) == 0:
         return "Sorry! No station for your city has been found!"
     else:
