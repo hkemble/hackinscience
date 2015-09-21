@@ -8,7 +8,7 @@ velib = \
 
      {'address': ("52 RUE D'ENGHIEN / ANGLE RUE DU FAUBOURG POISSONIERE",
       "- 75010 PARIS"),
-      'zip': '75010',
+      'zip': '75010-',
       'number': 10042, 'latitude': 48.87242006305313, 'city': 'PARIS-',
       'name': 'ENGHIEN-',
       'longitude': 2.348395236282807},
