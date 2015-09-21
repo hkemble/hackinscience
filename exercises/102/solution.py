@@ -42,6 +42,6 @@ def check_my_city(city_name):
     if len(code) == 0:
         return "Sorry! No station for your city has been found!"
     else:
-        return {"stations_nb": len(code) - 1,
+        return {"stations_nb": len(code),
                 "zip_code": code[1:],
                 "city": cit[1]}
