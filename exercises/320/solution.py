@@ -1,8 +1,9 @@
 file = open('words.txt')
+A = file.read()
 count = [0] * 26
 alpha = 'abcdefghijklmnopqrstuvwxyz'
 for i in range(26):
-    for j in file.read():
+    for j in A:
         if alpha[i] == j.lower():
             count[i] = count[i] + 1
 total = sum(count)
