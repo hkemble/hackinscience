@@ -1,6 +1,7 @@
-file = open('words.txt')
-count = 0
-for i in file.read():
-    if i == 'e':
-        count = count+1
-print(count)
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Sep 22 18:30:30 2015
+
+@author: Harry
+"""
+
