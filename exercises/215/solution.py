@@ -1,8 +1,8 @@
 import prime_tools
 
 
-track = []
-for i in range(222281, 222382):
+for i in range(222281, 222381):
+    track = []
     binar = str(bin(i)[2:])
     for j in range(len(binar)):
         if binar[j] == '1':
