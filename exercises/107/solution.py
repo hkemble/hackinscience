@@ -3,7 +3,7 @@ def select_student(grades, cutoff):
     accepted = []
     rejected = []
     for i in range(len(grades)):
-        if grades[i][2] >= cutoff:
+        if grades[i][1] >= cutoff:
             accepted.append(grades[i])
         else:
             rejected.append(grades[i])
