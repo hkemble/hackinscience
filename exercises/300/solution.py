@@ -1,2 +1,2 @@
 file = open('words.txt')
-print(file)
+print(file.read())
