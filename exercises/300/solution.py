@@ -1,2 +1,2 @@
-file = open('words.txt')
+file = open('words')
 print(file.read())
