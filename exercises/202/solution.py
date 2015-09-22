@@ -1,5 +1,5 @@
 def starts_with(haystack, needle):
-    if haystack[0] == needle:
+    if needle == haystack[:len(needle)]:
         return True
     else:
         return False
