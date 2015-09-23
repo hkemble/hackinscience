@@ -13,5 +13,5 @@ def locate(tup):
                 (data[i]['longitude'] - tup[1]) ** 2) ** 0.5)
         if new < closest:
             closest = new
-            city = data[i]['city']
+            city = data[i]['name']
     return {'distance': closest, 'city': city}
