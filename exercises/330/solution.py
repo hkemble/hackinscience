@@ -2,7 +2,6 @@ import json
 
 
 def load_json(path):
-    json_data = open(path)
-    data = json.load(json_data)
-    decoded = json.JSONDecoder(data)
-    return decoded
+    with open(path) as json_data:
+        data = json.load(json_data)
+    return data
