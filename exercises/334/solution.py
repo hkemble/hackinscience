@@ -10,7 +10,7 @@ def locate(lat, lon):
     city = 'none'
     for i in range(len(data)):
         new = (((data[i]['latitude'] - lat) ** 2 +
-                (data[i]['longitude'] - long) ** 2) ** 0.5)
+                (data[i]['longitude'] - lon) ** 2) ** 0.5)
         if new < closest:
             closest = new
             city = data[i]['city']
