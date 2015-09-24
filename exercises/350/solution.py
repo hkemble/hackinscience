@@ -14,6 +14,7 @@ def encode2(obj):
         return obj
     else:
         return obj
-    
+
+
 def encode(stuff):
     return bytes(encode2(stuff), encoding='ascii')
