@@ -1,17 +1,12 @@
-import json
+import bencode_tools as bt
 
 
-with open('velib_clean.json', 'r') as json_data:
-    data = json.load(json_data)
-
-
-def locate(tup):
-    closest = 1000000000
-    city = 'none'
-    for i in range(len(data)):
-        new = (((data[i]['latitude'] - tup[0]) ** 2 +
-                (data[i]['longitude'] - tup[1]) ** 2) ** 0.5)
-        if new < closest:
-            closest = new
-            city = data[i]['name']
-    return {'distance': closest, 'city': city}
+def encode(obj):
+    t = str(type(obj))
+    obj = bt.bencode_dic['%s' %t](obj)
+    return encode(obj)
+    
+    
+    bt.bencode_dic["<class 'bytes'>"](obj)
+#def decode(byte):
+    
